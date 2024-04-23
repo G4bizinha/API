@@ -28,11 +28,12 @@ async function Posts(pageNumber) {
                 postDiv.classList.add('post');
                 postDiv.innerHTML =
                 `   
-                    <div class="rounded p-2"></div>
+                    <div class="rounded-full p-2"></div>
                     <h2><strong>ID: </strong>${post.id}</h2>
+                    <strong class="bg-zinc-200 text-black p-1 rounded-full">Autor <p class="text-blue-500"> ${user ? user.name : 'Desconhecido'} </p> </strong>
                     <p><strong>Titulo: ${post.title}</p></strong>
                     <p>${post.body}</p>
-                    <p class="bg-blue-100 w-12 rouded p-1>${user ? user.name : 'Desconhecido'} <strong class="bg-zinc-100 ">Autor</strong></p>
+                    
                 `;
 
                 // Adiciona um espaço antes dos comentários
@@ -47,7 +48,7 @@ async function Posts(pageNumber) {
                     postDiv.innerHTML +=
                     `
                         <div class="p-2">
-                            <p><strong>Titulo:</strong> ${comment.name}</p>
+                            <p class="text-blue-800 p-1 rounded-md bg-blue-200 w-3/12 justify-between flex">${comment.email} <strong class="text-black p-1 rounded-full">E-mail do Autor</strong> </p>
                             <p>${comment.body}</p>
                         </div>
                     `;
