@@ -32,7 +32,7 @@ async function Posts(pageNumber) {
                     <h2><strong>ID: </strong>${post.id}</h2>
                     <p><strong>Titulo: ${post.title}</p></strong>
                     <p>${post.body}</p>
-                    <p class="bg-blue-100 w-12 rouded p-1 >${user ? user.name : 'Desconhecido'} <strong class="bg-zinc-100 ">Autor</strong></p>
+                    <p class="bg-blue-100 w-12 rouded p-1>${user ? user.name : 'Desconhecido'} <strong class="bg-zinc-100 ">Autor</strong></p>
                 `;
 
                 // Adiciona um espaço antes dos comentários
